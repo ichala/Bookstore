@@ -7,6 +7,9 @@ function InputData() {
   const [Title, setTitle] = useState('unknown');
   const [Author, setAuthor] = useState('unknown');
   const dispatch = useDispatch();
+  const submitBookToStore = (data) => {
+    dispatch(createBook(data));
+  };
   return (
     <>
       <form>
@@ -16,7 +19,7 @@ function InputData() {
           type="submit"
           onClick={(e) => {
             e.preventDefault();
-            dispatch(createBook({ id: uuidv4(), title: Title, author: Author }));
+            submitBookToStore({ id: uuidv4(), title: Title, author: Author });
           }}
         >
           Submit

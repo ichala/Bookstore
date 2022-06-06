@@ -7,12 +7,15 @@ import { deleteBook } from '../redux/books/books';
 function Books() {
   const books = useSelector((state) => state.book);
   const dispatch = useDispatch();
+  const removeBookFromStore = (id) => {
+    dispatch(deleteBook(id));
+  };
   return (
     <>
       {books.map((book) => (
         <div key={book.id}>
           <Book title={book.title} author={book.author} />
-          <button type="button" onClick={() => { dispatch(deleteBook(book.id)); }}>Remove</button>
+          <button type="button" onClick={() => { removeBookFromStore(book.id); }}>Remove</button>
         </div>
       ))}
       <InputData />
