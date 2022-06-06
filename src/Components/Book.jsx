@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 function Book(props) {
   const { title, author } = props;
+
   return (
     <div>
       {title}
