@@ -19,7 +19,9 @@ function InputData() {
           type="submit"
           onClick={(e) => {
             e.preventDefault();
-            submitBookToStore({ id: uuidv4(), title: Title, author: Author });
+            submitBookToStore({
+              item_id: uuidv4(), title: Title, author: Author, category: '',
+            });
           }}
         >
           Submit
