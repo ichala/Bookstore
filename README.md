@@ -11,6 +11,7 @@
 - Javascript
 - npm
 - Redux
+- Thunk
 
 
 ## Live Demo 
@@ -55,7 +56,7 @@ Feel free to check the [issues page](../../issues/).
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-
+- [Bookstore API documentation](https://www.notion.so/Bookstore-API-51ea269061f849118c65c0a53e88a739) to learn how to use the API.
 - Hat tip to anyone whose code was used
 - Inspiration
 - etc
