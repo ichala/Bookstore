@@ -4,8 +4,11 @@ import { Link } from 'react-router-dom';
 function Navbar() {
   return (
     <>
-      <Link to="/"> Books </Link>
-      <Link to="/Categories"> Categories </Link>
+      <header className="header bg-white p-3 d-flex align-items-center mb-4">
+        <h1 className="header-text d-inline-block">BookStore CMS</h1>
+        <Link to="/" className=" link">BOOKS</Link>
+        <Link to="/categories" className="link">CATEGORIES</Link>
+      </header>
     </>
   );
 }
