@@ -12,21 +12,22 @@ function InputData() {
   };
   return (
     <>
-      <form>
-        <input type="text" placeholder="title" name="title" id="title" onChange={(e) => setTitle(e.target.value)} />
-        <input type="text" placeholder="author" name="author" id="author" onChange={(e) => setAuthor(e.target.value)} />
-        <button
-          type="submit"
-          onClick={(e) => {
-            e.preventDefault();
-            submitBookToStore({
-              item_id: uuidv4(), title: Title, author: Author, category: '',
-            });
-          }}
-        >
-          Submit
-        </button>
-      </form>
+
+      <span className="add-new-book">ADD NEW BOOK</span>
+      <input id="clear-title" placeholder="Book Title" onChange={(e) => setTitle(e.target.value)} className="book-title-input" />
+      <input id="clear-author" placeholder="Author" onChange={(e) => setAuthor(e.target.value)} className="book-category-input" />
+      <button
+        type="button"
+        className="btn add-book-button"
+        onClick={(e) => {
+          e.preventDefault();
+          submitBookToStore({
+            item_id: uuidv4(), title: Title, author: Author, category: '',
+          });
+        }}
+      >
+        ADD BOOK
+      </button>
     </>
   );
 }
